@@ -20,7 +20,7 @@ def upload_files():
         temp_file2_path = temp_file2.name
 
     # Process the files
-    result_file = tempfile.NamedTemporaryFile(delete=False)
+    result_file = tempfile.NamedTemporaryFile(delete=False, suffix='.xlsx')
     result_file_path = result_file.name
     process_files(temp_file1_path, temp_file2_path, result_file_path)
 
